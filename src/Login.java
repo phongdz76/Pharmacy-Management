@@ -1,4 +1,9 @@
 
+
+import static java.awt.AWTEventMulticaster.add;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
 import javax.swing.JOptionPane;
 
 /*
@@ -17,6 +22,17 @@ public class Login extends javax.swing.JFrame {
      */
     public Login() {
         initComponents();
+        SignIn2.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                getContentPane().removeAll();
+                getContentPane().add(Main);
+                getContentPane().revalidate();
+                getContentPane().repaint();
+            }
+            
+        });
+        add(SignIn2);
     }
 
     /**
@@ -59,7 +75,7 @@ public class Login extends javax.swing.JFrame {
         SignIn1.setForeground(new java.awt.Color(0, 0, 0));
         SignIn1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/herbal (1).png"))); // NOI18N
         SignIn1.setText("Medick Flare");
-        getContentPane().add(SignIn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, -1));
+        getContentPane().add(SignIn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, -1, -1));
 
         UserName.setBackground(new java.awt.Color(255, 255, 255));
         UserName.setText("  ");
@@ -123,7 +139,7 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_UserNameActionPerformed
 
     private void SignIn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignIn2ActionPerformed
-        // TODO add your handling code here:
+    
     }//GEN-LAST:event_SignIn2ActionPerformed
 
     private void PasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PasswordActionPerformed
