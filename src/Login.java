@@ -1,10 +1,13 @@
 
 
 import static java.awt.AWTEventMulticaster.add;
+import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
+import javax.swing.JFrame;
+
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -16,23 +19,12 @@ import javax.swing.JOptionPane;
  * @author nguye
  */
 public class Login extends javax.swing.JFrame {
-
     /**
      * Creates new form Login
      */
     public Login() {
         initComponents();
-        SignIn2.addActionListener(new ActionListener(){
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                getContentPane().removeAll();
-                getContentPane().add(Main);
-                getContentPane().revalidate();
-                getContentPane().repaint();
-            }
-            
-        });
-        add(SignIn2);
+     
     }
 
     /**
@@ -139,7 +131,7 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_UserNameActionPerformed
 
     private void SignIn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignIn2ActionPerformed
-    
+
     }//GEN-LAST:event_SignIn2ActionPerformed
 
     private void PasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PasswordActionPerformed
